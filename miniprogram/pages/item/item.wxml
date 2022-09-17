@@ -1,0 +1,55 @@
+<view class="box"  >
+			<view class="boxhead" >
+				<view class="mark{{item.type}}"></view>
+				<view class="userName">{{item.userName}}</view>
+				<view class="submitTime">{{item.submitTime}}</view>
+			</view> 
+			<view class="boxcenter" >
+				<!-- <view class="title">{{item.title}}</view> -->
+				<view class="content" >{{item.content}}</view>
+				<view class='contact'> 联系方式:{{item.contact}}</view>
+				<view>
+					<!-- 九宫格布局预览图片 -->
+					<view wx:for="{{[0,1]}}" wx:for-item="i" wx:key='index'>
+						<view style="flex-direction:row;display:flex;"><!-- 横排布局 -->
+							<view bindtap="previewImage" data-index='{{index}}'wx:for="{{urls}}" wx:for-item="url" wx:for-index="index" wx:key='index'><!-- 遍历数组 -->
+								<view wx:if="{{index>=i*3 && index<3*(i+1)}}" class="flex-item"><!-- 分段显示 -->
+									<image src="{{url}}" style="height:200rpx;width:200rpx;"></image>
+								</view>
+							</view>
+						</view>
+					</view>
+				</view>
+
+			</view>
+			<view class="boxbottom">	
+			<view class="commentcdetail" >
+					<view class="comcontent" wx:for="{{comment}}" wx:key='index'>
+					#{{index+1}} {{item}}
+					</view>
+                <view class="weui-cell__bd">
+                    <textarea class="input" placeholder-class="grey" value="{{nowcomment}}" bindinput="commentInput"   placeholder="请输入200字以内评论" 
+                    maxlength='200'  ></textarea>
+                </view>
+								<view class='submit' bindtap="submitComment">
+								回复
+								</view>
+			
+			</view>
+			<view class='smallitem'>
+				<view class='talk-item-zan'>
+              <view class="like_box">
+                <image src='../../images/2.png' class="zan_img" wx:if="{{item.islike==1}}"></image>
+                <image src='../../images/1.png' class="zan_img" wx:else></image>
+                <text class='zan_num' >{{item.like}}</text>
+              </view>
+			  </view>
+			<view class="comment" >评论：{{comment.length||0}}</view>
+			<view class="collect" bindtap="collect">
+				<image src='../../images/collect1.png' class="collect_img" wx:if="{{iscollect}}"></image>
+				<image src='../../images/collect0.png' class="collect_img" wx:else></image>
+	
+			</view>	
+			</view>
+			</view>
+</view>

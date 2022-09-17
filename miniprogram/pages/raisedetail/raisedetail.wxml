@@ -1,0 +1,35 @@
+<view class="tabNav">
+    <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" 
+		class="{{currentTab==index ? 'cur' : ''}}">
+			<text>{{item}}</text>
+		</view>
+</view>
+<view class="orderInfo">
+  <view class="orderInfo-item" wx:for="{{raiseList}}" 
+	wx:if="{{item.type==currentTab||currentTab==0}}" wx:key="index"> 
+	<view class="box"  >
+			<view class="boxhead" bindtap="itemTap" data-item="{{item}}">
+				<view class="mark{{item.type}}"></view>
+				<view class="userName">{{item.userName}}</view>
+				<view class="submitTime">{{item.time}} </view>
+			</view> 
+			<view class="boxcenter" bindtap="itemTap" data-item="{{item}}">
+				<!-- <view class="title">{{item.title}}</view> -->
+				<view class="content" >{{item.content}}</view>
+			</view>
+			<view class="boxbottom">	
+	
+				<view class='talk-item-zan'>
+              <view bindtap='favorclick'  data-item='{{item}}'data-index='{{index}}'class="like_box">
+                <image src='../../images/2.png' class="zan_img" wx:if="{{item.islike}}"></image>
+                <image src='../../images/1.png' class="zan_img" wx:else></image>
+                <text class='zan_num' >{{item.like.length}}</text>
+              </view>
+			  </view>
+			<view class="comment"  bindtap="itemTap" data-item="{{item}}">评论：{{item.comment.length||0}}</view>
+			</view>
+	</view>
+</view>
+
+
+</view>

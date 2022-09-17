@@ -1,0 +1,126 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "id": -1,
+          "name": "pages/famous/famous",
+          "pathName": "pages/famous/famous",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/teacherlist/teacherlist",
+          "pathName": "pages/teacherlist/teacherlist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "pages/teacherdetail/teacherdetail",
+          "pathName": "pages/teacherdetail/teacherdetail",
+          "query": "id= cb6f8a5a-f6f0-4be5-a848-b846e47c0549",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/orderlist/orderlist",
+          "pathName": "pages/orderlist/orderlist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/orderlist/orderlist",
+          "pathName": "pages/orderlist/orderlist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 8,
+          "name": "pages/orderdetail/orderdetail",
+          "pathName": "pages/orderdetail/orderdetail",
+          "query": "id= 809d2248-c558-4ecf-a3d0-4d0b360aa82c",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/teachermanage/teachermanage",
+          "pathName": "pages/teachermanage/teachermanage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/teachermanage/teachermanage",
+          "pathName": "pages/teachermanage/teachermanage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/addteacher/addteacher",
+          "pathName": "pages/addteacher/addteacher",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/teachermanage/teachermanage",
+          "pathName": "pages/teachermanage/teachermanage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/raise/raise",
+          "pathName": "pages/raise/raise",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/raisedetail/raisedetail",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

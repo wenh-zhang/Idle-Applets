@@ -1,0 +1,41 @@
+
+<view class="container">
+  <view class="page-body">
+        <block wx:if="{{hasUserInfo}}">
+            <view class="flex-item">
+                <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+                <text class="nickname">{{userInfo.nickName}}</text>
+            </view>
+        </block>
+        <block wx:if="{{!hasUserInfo}}">
+            <view class="flex-item">
+                <image class="userinfo-avatar" src="../../images/user-unlogin.png" background-size="cover"></image>
+                <view style="text-align:center;margin-bottom:5px"><button open-type="getUserInfo" lang="zh_CN" size="mini" type="primary" bindtap="getUserProfile">登录{{Object.keys(userInfo).length}}</button></view>
+            </view>
+        </block>
+  </view>
+</view>
+<view class="space"></view>
+<view class="container">
+  <view class="page-body">  
+          <mp-cells title="">
+            <mp-cell link  bindtap="toRaise" hover value="我的发布" footer="" ext-class="green">
+                <image slot="title" src="../../images/myfabu.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </mp-cell>
+            <mp-cell link bindtap="toCollect" hover value="我的收藏" footer="" ext-class="blue">
+                <image slot="title" src="../../images/mycollect.png" style="margin-right: 16px;vertical-align: middle;width:20px; height: 20px;"></image>
+            </mp-cell>
+            
+            </mp-cells>
+        <!-- </view> -->
+
+  </view>
+</view>
+<view class="space"></view>
+<block wx:if="{{hasUserInfo}}">
+<view class="container">
+    <view class="logOut">
+        <text style="text-align:center;" bindtap="logOut">退出账号</text>
+    </view>
+</view>
+</block>
